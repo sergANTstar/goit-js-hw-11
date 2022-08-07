@@ -26,7 +26,7 @@ function onSearch(e) {
     refs.loadMore.classList.add('is-hidden')
     newsApiServer.query = e.currentTarget.elements.searchQuery.value;
 
-    if (newsApiServer.query === null) {
+    if (newsApiServer.query.trim() === '') {
         return Notify.info("Please, enter search text!")
     }
 
